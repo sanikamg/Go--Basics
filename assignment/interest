@@ -1,0 +1,24 @@
+package main
+
+import "fmt"
+
+func main() {
+	var p int
+	var n float32
+	var r float32
+	var si float32
+
+	fmt.Println("Enter Principal amount : ")
+	fmt.Scan(&p)
+
+	fmt.Println("Enter No. of years : ")
+	fmt.Scan(&n)
+
+	fmt.Println("Enter interest : ")
+	fmt.Scan(&r)
+
+	si = (float32(p) * n * r) / 100
+
+	fmt.Printf("Simple interest is %v", si)
+
+}

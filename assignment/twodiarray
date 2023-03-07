@@ -1,0 +1,42 @@
+package main
+
+import "fmt"
+
+func main() {
+	var array1 [100][100]int
+	var array2 [100][100]int
+	var array3 [100][100]int
+
+	fmt.Printf("Enter size of your array: ")
+	var size int
+	fmt.Scanln(&size)
+
+	fmt.Println("Enter the values of array1 : ")
+	for i := 0; i < size; i++ {
+		for j := 0; j < size; j++ {
+			fmt.Scan(&array1[i][j])
+		}
+	}
+
+	fmt.Println("Enter the values of array2: ")
+	for i := 0; i < size; i++ {
+		for j := 0; j < size; j++ {
+			fmt.Scan(&array2[i][j])
+		}
+	}
+
+	for i := 0; i < size; i++ {
+		for j := 0; j < size; j++ {
+			array3[i][j] = array1[i][j] + array2[i][j]
+		}
+	}
+
+	fmt.Println("sum of the array is: ")
+	for i := 0; i < size; i++ {
+		for j := 0; j < size; j++ {
+			fmt.Printf("%d ", array3[i][j])
+		}
+		fmt.Println(" ")
+	}
+
+}

@@ -1,0 +1,27 @@
+package main
+
+import "fmt"
+
+func main() {
+	var size int
+	fmt.Println("Enter your array size : ")
+	fmt.Scan(&size)
+
+	var arr = make([]int, size)
+	for i := 0; i < size; i++ {
+		fmt.Printf("Enter %d th element : ", i)
+		fmt.Scan(&arr[i])
+	}
+	fmt.Println("Your array is: ", arr)
+
+	for i := 0; i < size; i++ {
+		for j := i + 1; j < size; j++ {
+			if arr[i] < arr[j] {
+				temp := arr[i]
+				arr[i] = arr[j]
+				arr[j] = temp
+			}
+		}
+	}
+	fmt.Println("Your sorted array is: ", arr)
+}

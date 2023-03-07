@@ -1,0 +1,56 @@
+package main
+
+import "fmt"
+
+func main() {
+	var size int
+
+	fmt.Println("Enter your array size : ")
+	fmt.Scan(&size)
+
+	array1, array2 := getarray(size)
+	array3 := addArray(array1, array2, size)
+	displayArray(array3)
+}
+func getarray(num int) ([][]int, [][]int) {
+	fmt.Println("Enter your array1 values : ")
+	array1 := make([][]int, num)
+	for i := range array1 {
+		array1[i] = make([]int, num)
+	}
+	for i := 0; i < num; i++ {
+		for j := 0; j < num; j++ {
+			fmt.Scan(&array1[i][j])
+		}
+	}
+	fmt.Println("Enter your array2 values : ")
+	array2 := make([][]int, num)
+	for i := range array2 {
+		array2[i] = make([]int, num)
+	}
+	for i := 0; i < num; i++ {
+		for j := 0; j < num; j++ {
+			fmt.Scan(&array2[i][j])
+		}
+	}
+	return array1, array2
+}
+
+func addArray(array1 [][]int, array2 [][]int, num int) [][]int {
+	array3 := make([][]int, num)
+	for i := range array3 {
+		array3[i] = make([]int, num)
+	}
+	for i := 0; i < num; i++ {
+		for j := 0; j < num; j++ {
+			array3[i][j] = array1[i][j] + array2[i][j]
+		}
+	}
+
+	return array3
+
+}
+
+func displayArray(array3 [][]int) {
+	fmt.Println("Array is ", array3)
+}

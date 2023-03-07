@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+func main() {
+	var limit int
+	var sum int
+	sum = 0
+	fmt.Println("Enter the limit")
+	fmt.Scan(&limit)
+
+	for i := 1; i <= limit; i++ {
+		if i%2 != 0 {
+			sum = sum + i
+		}
+	}
+
+	fmt.Printf("sum is %v", sum)
+}

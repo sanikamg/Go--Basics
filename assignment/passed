@@ -1,0 +1,16 @@
+// Write a program to check whether a student has passed or failed in a subject after he    or she enters their mark (pass mark for a subject is 50 out of 100).
+
+package main
+
+import "fmt"
+
+func main() {
+	var mark float32
+	fmt.Println("Enter your mark : ")
+	fmt.Scan(&mark)
+	if mark >= 50 {
+		fmt.Println("Passed")
+	} else {
+		fmt.Println("Failed")
+	}
+}

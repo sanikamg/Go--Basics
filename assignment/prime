@@ -1,0 +1,24 @@
+package main
+
+import "fmt"
+
+func main() {
+	var prime int
+	var fact int
+	fact = 0
+	fmt.Println("Enter a number : ")
+	fmt.Scan(&prime)
+
+	for i := 1; i <= prime; i++ {
+		if prime%i == 0 {
+			fact = fact + 1
+		}
+	}
+
+	if fact == 2 {
+		fmt.Println("It is a prime number")
+	} else {
+		fmt.Println("It is not a prime number")
+	}
+
+}

@@ -1,0 +1,22 @@
+// Accept two inputs from the user and output their sum.
+
+package main
+
+import "fmt"
+
+func main() {
+	var sum float32
+	var num1 int
+	var num2 float32
+
+	fmt.Printf("Enter first number : ")
+	fmt.Scan(&num1)
+
+	fmt.Printf("Enter first number : ")
+	fmt.Scan(&num2)
+
+	sum = float32(num1) + num2
+
+	fmt.Printf("Sum is %v", sum)
+
+}

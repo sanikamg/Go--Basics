@@ -1,0 +1,29 @@
+package main
+
+import "fmt"
+
+func main() {
+	var day int
+	fmt.Printf("Enter a day : \n")
+	fmt.Printf("1 : sunday\n 2: Monday\n 3:Tuesday 4:Wednesday\n 5:Thursday\n 6:Friday\n")
+	fmt.Scan(&day)
+
+	switch day {
+	case 1:
+		fmt.Println("Choosen day is sunday")
+	case 2:
+		fmt.Println("Choosen day is monday")
+	case 3:
+		fmt.Println("Choosen day is tuesday")
+	case 4:
+		fmt.Println("Choosen day is wednesday")
+	case 5:
+		fmt.Println("Choosen day is thursday")
+	case 6:
+		fmt.Println("Choosen day is friday")
+	case 7:
+		fmt.Println("Choosen day is saturday")
+	default:
+		fmt.Println("Invalid mark")
+	}
+}

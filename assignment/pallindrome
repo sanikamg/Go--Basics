@@ -1,0 +1,25 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+	var originalString string
+	fmt.Println("Enter a string : ")
+	fmt.Scan(&originalString)
+	var reverseString string = ""
+	var length = len(originalString)
+
+	for i := length - 1; i >= 0; i-- {
+		fmt.Println(originalString[i])
+		reverseString = reverseString + string(originalString[i])
+	}
+
+	if originalString == reverseString {
+		fmt.Println("The given string is Palindrome")
+	} else {
+		fmt.Println("The given string is not a Palindrome")
+	}
+}

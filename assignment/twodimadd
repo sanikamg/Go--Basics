@@ -1,0 +1,30 @@
+package main
+
+import "fmt"
+
+func main() {
+	var size int
+
+	fmt.Println("Enter your array size : ")
+	fmt.Scan(&size)
+	fmt.Println("Enter your array values : ")
+	array := getarray(size)
+	displayArray(array)
+}
+func getarray(num int) [][]int {
+	array := make([][]int, num)
+	for i := range array {
+		array[i] = make([]int, num)
+	}
+	for i := 0; i < num; i++ {
+		for j := 0; j < num; j++ {
+			fmt.Scan(&array[i][j])
+		}
+	}
+	return array
+
+}
+
+func displayArray(array [][]int) {
+	fmt.Println("Array is ", array)
+}

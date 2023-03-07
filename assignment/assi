@@ -1,0 +1,16 @@
+package main
+
+import "fmt"
+
+func main() {
+	var wrtn float32
+	var lab float32
+	var assi float32
+	var result float32
+
+	fmt.Println("Enter your written test,lab exams and assignments score respectively : ")
+	fmt.Scan(&wrtn, &lab, &assi)
+	result = ((wrtn * 70) / 100) + ((lab * 20) / 100) + ((assi * 10) / 100)
+	fmt.Printf("Arun's overall grade = %f", result)
+
+}

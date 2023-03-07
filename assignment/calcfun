@@ -1,0 +1,59 @@
+package main
+
+import "fmt"
+
+func main() {
+	var choice int
+	var num1 int
+	var num2 int
+
+	fmt.Println("Enter first number : ")
+	fmt.Scanln(&num1)
+	fmt.Println("Enter second number : ")
+	fmt.Scanln(&num2)
+
+	fmt.Println("select one operation : \n1 : addition\n2 : substraction\n3 : multiplication\n4 : division")
+	fmt.Scanln(&choice)
+
+	switch choice {
+	case 1:
+		fmt.Printf("%v is the sum", add(num1, num2))
+
+	case 2:
+		fmt.Printf("%v is the substraction result", substract(num1, num2))
+
+	case 3:
+		fmt.Printf("%v is the multiplication result", multiply(num1, num2))
+
+	case 4:
+		fmt.Printf("%f is the division result", divide(num1, num2))
+
+	default:
+		fmt.Println("You are entered wrong choice.")
+
+	}
+}
+
+func add(number1, number2 int) int {
+
+	return number1 + number2
+}
+
+func multiply(number1, number2 int) int {
+
+	return number1 * number2
+}
+
+func divide(number1, number2 int) float32 {
+
+	if number2 == 0 {
+		panic("you can not divide to 0") //or replace panic with fmt.Println();
+	}
+
+	return float32(number1 / number2)
+}
+
+func substract(number1, number2 int) int {
+
+	return number1 - number2
+}

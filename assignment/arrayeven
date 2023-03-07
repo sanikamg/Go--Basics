@@ -1,0 +1,26 @@
+package main
+
+import "fmt"
+
+func main() {
+	var size int
+	var even int
+	even = 0
+
+	fmt.Println("Enter your array size : ")
+	fmt.Scan(&size)
+
+	var arr = make([]int, size)
+	for i := 0; i < size; i++ {
+		fmt.Printf("Enter %d th element : ", i)
+		fmt.Scan(&arr[i])
+	}
+
+	for i := 0; i < size; i++ {
+		if arr[i]%2 == 0 {
+			even = even + 1
+		}
+	}
+	fmt.Printf("Total number of even number is : %v", even)
+
+}

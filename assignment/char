@@ -1,0 +1,12 @@
+// Accept a char input from the user and display it on the console.
+package main
+
+import "fmt"
+
+func main() {
+	var ch byte
+	fmt.Println("Enter any character : ")
+	fmt.Scanf("%c", &ch)
+	fmt.Printf("%c is the character entered.", ch)
+
+}

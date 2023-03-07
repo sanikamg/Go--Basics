@@ -1,0 +1,32 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	pallindrome()
+}
+
+func pallindrome() {
+	var str string
+
+	fmt.Printf("Enter the string:")
+	fmt.Scan(&str)
+
+	rev := []byte{}
+	for i := len(str) - 1; i >= 0; i-- {
+		rev = append(rev, str[i])
+
+	}
+
+	x := strings.Compare(str, string(rev))
+
+	if x == 0 {
+		fmt.Printf("%v is pallindrome \n", str)
+	} else {
+		fmt.Printf("%v is a not pallindrome \n", str)
+	}
+
+}

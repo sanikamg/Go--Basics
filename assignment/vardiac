@@ -1,0 +1,14 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	student(1, "sanika", 1, 2, 3)
+
+}
+func student(id int, name string, mark ...int) {
+	fmt.Println(mark)
+	fmt.Println(id)
+	fmt.Println(name)
+}
